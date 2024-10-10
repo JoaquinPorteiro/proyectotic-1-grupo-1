@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Lista de Usuarios</h1>
+<!-- Botón para volver a la página de inicio -->
+<button onclick="window.location.href='/'" class="btn btn-primary">Volver a Inicio</button>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre de Usuario</th>
+        <th>Nombre Completo</th>
+        <th>Rol</th>
+    </tr>
+    </thead>
+    <tbody id="userTableBody">
+    <!-- El cuerpo de la tabla será llenado por JavaScript -->
+    </tbody>
+</table>
+
+<!-- Incluir el archivo JavaScript -->
+<script src="/js/userTable.js"></script>
+</body>
+</html>

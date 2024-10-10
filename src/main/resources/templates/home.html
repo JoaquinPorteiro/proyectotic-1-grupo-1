@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: rgb(252, 252, 247);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #14110f;
+    }
+
+    .dashboard {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      width: 350px;
+      color: #fff;
+    }
+
+    .dashboard_title {
+      font-size: 24px;
+      margin-top: 0;
+      font-weight: 300;
+      color: #151716;
+    }
+
+    .dashboard_user {
+      margin-top: 20px;
+    }
+
+    .dashboard_user_name {
+      font-size: 18px;
+      color: #151716;
+    }
+
+    .span-text {
+      text-align: right;
+      color: white;
+    }
+
+    .span-text a {
+      color: #151716;
+      text-decoration: none;
+    }
+
+    .span-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+<div class="dashboard">
+  <h1 class="dashboard_title">Welcome to the Dashboard</h1>
+  <div class="dashboard_user">
+    <h2 th:text="${userdetail.fullname}" class="dashboard_user_name"></h2>
+  </div>
+  <div class="span-text">
+    <span sec:authorize="isAuthenticated"><a th:href="@{/logout}">Logout</a></span>
+  </div>
+  <div class="span-text">
+    <span sec:authorize="isAuthenticated"><a th:href="@{/index}">Pagina de prueba</a></span>
+  </div>
+</div>
+
+</body>
+
+</html>
